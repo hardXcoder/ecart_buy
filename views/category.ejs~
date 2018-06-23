@@ -1,0 +1,60 @@
+<% include partials/header %>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:yellow">
+        <a class="navbar-brand" href="#"><h1><b>Welcome to Ecart</b></h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+                <li class="nav-item">
+                </li>
+                
+            </ul>
+          <div style="width: 35%;padding: 5px;"> 
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/admin">ADD ITEMS</a>
+              </li>
+                <!--<li class="nav-item"><a class="nav-link"><i class="fas fa-user"></i> SIGN IN</a></li>-->
+                <li class="nav-item"><a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i>   CART</a></li>
+              </ul>
+         </div>
+          
+        </div>
+      </nav> 
+      <div style="background:url(https://images-eu.ssl-images-amazon.com/images/G/31/img18/Wireless/CEEX/Redmi5/EMISBI/D5332879_Redmi5_pc-hero-1500X300_2._CB475609744_.jpg) ;margin-top:80px; width: 100% ; height:300px ; margin: 5px auto ">
+
+          <div style="border: 2px solid black; border-radius: 5px;margin: 0px auto">
+              <h1 style="width: 50%;"> Ecart</h1>
+              <h4  style="width: 30%; margin-left: auto"> Single day delivery promise </h4>
+            </div>
+      </div>
+      <div class="input-group mb-3 container" style="margin: 100px auto; " >
+            <div class="input-group-append">
+            </div>
+      </div>
+      <div class="row" style="margin-top: 1px" id="pro">
+          <% for(var i=0;i<data.length;i++){ %>
+            <div class="col-lg-4 col-sm-6">
+                <div class="card" style="width: 26rem; margin-top: 50px;background-color: beige">
+                      <img class="card-img-top" src='<%= data[i].img %>' alt="Card image cap" style="height: 300px;background-color: beige">
+                      <div class="card-body">
+                        <h5 class="card-title"><%= data[i].title %></h5>
+                        <p class="card-text"><%= data[i].description %></p>
+                        <p class="card-text"> ₹  <%= data[i].price %></p>
+                        <div class="card-footer" style="text-align: center">
+                          <button class="btn btn-primary btn-md addtocart" > ADD TO CART</button>
+                          </div>
+                      </div>
+                    </div>
+            </div>
+        <%  } %> 
+      </div>
+
+<% include partials/footer %>
+          
+     
