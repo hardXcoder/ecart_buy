@@ -1,4 +1,4 @@
-##Ecart
+# Ecart
 
 A simple nodejs web application made using express framework, having functionalities as those simple Ecommerce website.
 
